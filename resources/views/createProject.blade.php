@@ -12,7 +12,7 @@
 <body>
     <header>
         <h1 class="main-header"> Create New Project </h1>
-        <form method="GET" action="{{ url('search') }}" class="search-bar">
+        <form method="GET" action="{{ route('projectSearch') }}" class="search-bar">
             @csrf
             <input type="text" name="search" placeholder="Search...">
             <button type="submit">Search</button>

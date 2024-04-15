@@ -15,7 +15,7 @@
 
         <h1 class="main-header" class="obj">Projects</h1>
 
-        <form method="GET" action="{{ url('search') }}" class="search-bar">
+        <form method="GET" action="{{ route('projectSearch') }}" class="search-bar">
             @csrf
             <input type="text" name="search" placeholder="Search...">
             <button type="submit">Search</button>
@@ -40,7 +40,7 @@
                 @foreach ($projects as $project)
                     <tr class="active-row">
                         <td> {{ $project->pid }} </td>
-                        <td> <a href="{{URL("project")}}/{{ $project->id }}/{{$project->pid}}">{{ $project->title }}</a>
+                        <td> <a href="{{route('showProject', [$project->id,$project->pid])}}">{{ $project->title }}</a>
                         </td>
                         <td> {{ $project->start_date }} </td>
                         <td> {{ $project->end_date }} </td>

@@ -30,20 +30,20 @@
                 @foreach ($projects as $project)
                     <tr class="active-row">
                         <td> {{ $project->pid }} </td>
-                        <td> <a href="{{URL("project")}}/{{ $project->id }}/{{$project->pid}}">{{ $project->title }}</a>
+                        <td> <a href="{{route('showProject', [$project->id,$project->pid])}}">{{ $project->title }}</a>
                         </td>
                         <td> {{ $project->start_date }} </td>
                         <td> {{ $project->end_date }} </td>
                         <td> {{ $project->phase }} </td>
                         <td>{{ $project->description }} </td>
-                        <td><a href="{{URL("home")}}/{{$project->pid}}">Edit</a></td>
+                        <td><a href="{{route("home.editProject", $project->pid)}}">Edit</a></td>
                     </tr>
                 @endforeach
             </tbody>
     </main>
 
     <footer>
-        <a href="{{URL("home")}}/create">Create new project</a>
+        <a href="{{route('home.createProject')}}">Create new project</a>
 
     </footer>
 </body>

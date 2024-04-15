@@ -14,7 +14,7 @@
         <h1 class="main-header"> {{ $project->title }} </h1>
         <h3>Made By: {{ $user->username }}<h3>
         <h3>Email: {{ $user->email }}</h3>
-        <form method="GET" action="{{ url('search') }}" class="search-bar">
+        <form method="GET" action="{{ route('projectSearch') }}" class="search-bar">
             @csrf
             <input type="text" name="search" placeholder="Search...">
             <button type="submit">Search</button>
