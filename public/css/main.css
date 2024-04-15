@@ -1,0 +1,51 @@
+
+*{
+    font-family: "Poppins";
+}
+
+body {
+  color: black;
+}
+
+
+html, body {
+    margin: 0;
+    height: 100%;
+}
+
+a {
+  color: #DC5F00;
+  font-size: 120%;
+  font-weight: bold;
+}
+
+
+header {
+    height: 10vh;
+    min-width: 100vw;
+    display: flex;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main{
+    background-color: #f2f2f2 ;
+    flex: 1;
+}
+
+header h1{
+    margin: auto 0;
+    padding: 0.5em 1em;
+
+}
+
+
+.search-bar
+{
+    margin: auto 0;
+    margin-left: auto;
+}
