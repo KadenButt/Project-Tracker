@@ -18,7 +18,7 @@
         <form method="GET" action="{{ route('projectSearch') }}" class="search-bar">
             @csrf
             <input type="text" name="search" placeholder="Search...">
-            <button type="submit">Search</button>
+            <button type="submit" class="btn-main">Search</button>
         </form>
 
 

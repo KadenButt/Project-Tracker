@@ -1,6 +1,11 @@
 @extends('layouts.app')
 
 @section('content')
+
+<head>    
+    <link href="{{ URL::asset('css/main.css') }}" rel="stylesheet" />
+</head>
+
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -63,7 +68,7 @@
 
                         <div class="row mb-0">
                             <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
+                                <button type="submit" class="btn-main">
                                     {{ __('Register') }}
                                 </button>
                             </div>

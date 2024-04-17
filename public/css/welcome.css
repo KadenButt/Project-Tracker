@@ -1,0 +1,19 @@
+
+main {
+    text-align: center;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+
+  }
+  
+  .button-container button {
+    margin-right: 1vw; /* Optional: Adjust spacing between buttons */
+  }
+  
+
+
+
+
