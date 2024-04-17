@@ -11,6 +11,10 @@
 <body>
     <header>
         <h1>Home Page</h1>
+        <form method="POST" action="{{ route('logout') }}" class="logout-form">
+            @csrf
+            <button type="submit" class="btn-main">Logout</button>
+        </form>
     </header>
 
     <main>

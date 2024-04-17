@@ -16,13 +16,21 @@
         <h3>Email: {{ $user->email }}</h3>
         <form method="GET" action="{{ route('projectSearch') }}" class="search-bar">
             @csrf
-            <input type="text" name="search" placeholder="Search...">
-            <button type="submit" class="btn-main">Search</button>
+            <div class='search-container'>
+                <input type="text" name="search"  placeholder="Search...">
+                <button type="submit" id='search-submit'  class="btn-main">Search</button>
+                @if(Auth::check())
+                    <a href="{{ route('home') }}" class="btn-main">{{ Session::get('username') }}</a>
+                @else
+                
+                    <button type="Login" class="btn-main">Login</button>
+                    <button type="Register" class="btn-main">Register</button>
+            
+                @endif
+            </div>
         </form>
-
-
-
     </header>
+    
     <main>
         <h2> Discription </h2>
         <p>{{ $project->description }} </p>
