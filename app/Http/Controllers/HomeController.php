@@ -64,7 +64,6 @@ class HomeController extends Controller
             return redirect()->back()->with('error', 'Failed to update project.');
         }
 
-        //DB::table('projects')->where('pid', $request->input("pid"));
     }
 
     public function createLayout(Request $request)

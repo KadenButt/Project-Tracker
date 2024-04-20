@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('content')
-<head>    
+<head>
     <link href="{{ URL::asset('css/main.css') }}" rel="stylesheet" />
 </head>
 
@@ -59,8 +59,6 @@
                                 <button type="submit" class="btn-main">
                                     {{ __('Login') }}
                                 </button>
-
-     
                             </div>
                         </div>
                     </form>
