@@ -23,10 +23,10 @@
                 @if(Auth::check())
                     <a href="{{ route('home') }}" class="btn-main">{{ Session::get('username') }}</a>
                 @else
-                
-                    <button type="Login" class="btn-main">Login</button>
-                    <button type="Register" class="btn-main">Register</button>
-            
+
+                <a href="{{ route('login') }}" class="btn-main">Login</a>
+                <a href="{{ route('register') }}" class="btn-main">Register</a>
+
                 @endif
             </div>
         </form>
