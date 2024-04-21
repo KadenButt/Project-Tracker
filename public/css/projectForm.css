@@ -1,0 +1,21 @@
+.project-form {
+    padding-left: 80vh;
+}
+
+form label{
+    font-size: 25px;
+}
+
+input, select, textarea {
+    width: 40vh; /* Adjust the width as needed */
+    font-size: 18px;
+    /* Additional styling */
+}
+
+input, select {
+    height: 3vh; /* Adjust the height as needed */
+}
+
+textarea {
+    height: 20vh; /* Adjust the height as needed */
+}

@@ -11,9 +11,15 @@
 <body>
     <header>
         <h1>Home Page</h1>
-        <form method="POST" action="{{ route('logout') }}" class="logout-form">
+        <form method="GET" action="{{ route('projectSearch') }}" class="search-bar">
             @csrf
-            <button type="submit" class="btn-main">Logout</button>
+            <div class='search-container'>
+
+                <a href="{{ route('home') }}" class="btn-main">{{ Session::get('username') }}</a>
+                <a href="{{ route('home.createProject') }}" class="btn-main">Create New Project</a>
+                <a href="{{ route('showProjects') }}" class="btn-main">Projects</a>
+                <a href="{{ route('logout') }}" class="btn-main">Logout</a>
+            </div>
         </form>
     </header>
 
@@ -34,20 +40,19 @@
                 @foreach ($projects as $project)
                     <tr class="active-row">
                         <td> {{ $project->pid }} </td>
-                        <td> <a href="{{route('showProject', [$project->id,$project->pid])}}">{{ $project->title }}</a>
+                        <td> <a
+                                href="{{ route('showProject', [$project->id, $project->pid]) }}">{{ $project->title }}</a>
                         </td>
                         <td> {{ $project->start_date }} </td>
                         <td> {{ $project->end_date }} </td>
                         <td> {{ $project->phase }} </td>
                         <td>{{ $project->description }} </td>
-                        <td><a href="{{route("home.editProject", $project->pid)}}">Edit</a></td>
+                        <td><a href="{{ route('home.editProject', $project->pid) }}" class="btn-main">Edit</a></td>
                     </tr>
                 @endforeach
             </tbody>
     </main>
 
     <footer>
-        <a href="{{route('home.createProject')}}">Create new project</a>
-
     </footer>
 </body>

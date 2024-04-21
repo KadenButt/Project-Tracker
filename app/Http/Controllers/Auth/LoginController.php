@@ -38,7 +38,7 @@ class LoginController extends Controller
     {
         // Add your custom logic here to add information to the session
         $request->session()->put('id', $user->id);
-        $request->session()->put('username', $user->name);
+        $request->session()->put('username', $user->username);
         $request->session()->put('email', $user->email);
     }
 

@@ -18,16 +18,17 @@
         <form method="GET" action="{{ route('projectSearch') }}" class="search-bar">
             @csrf
             <div class='search-container'>
-                <input type="text" name="search"  placeholder="Search...">
-                <button type="submit" id='search-submit'  class="btn-main">Search</button>
                 @if(Auth::check())
                     <a href="{{ route('home') }}" class="btn-main">{{ Session::get('username') }}</a>
+                    <a href="{{ route('logout') }}" class="btn-main">Logout</a>
                 @else
 
                 <a href="{{ route('login') }}" class="btn-main">Login</a>
                 <a href="{{ route('register') }}" class="btn-main">Register</a>
-
+                <input type="text" name="search"  placeholder="Search...">
+                <button type="submit" id='search-submit'  class="btn-main">Search</button>
                 @endif
+
             </div>
         </form>
 
@@ -43,7 +44,7 @@
                     <th> Start Date </th>
                     <th> End Date </th>
                     <th> Phase</th>
-                    <th> Discription </th>
+                    <th> Description </th>
                 </tr>
             </thead>
             <tbody>

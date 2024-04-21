@@ -76,7 +76,7 @@ header h1 {
     cursor: pointer;
 }
 
-.btn-main:hover:not(#search-submit) {
+.btn-main:hover:not(#search-submit form) {
 
     transition: 1000ms;
     padding: 10px 50px;

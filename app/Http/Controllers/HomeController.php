@@ -45,6 +45,14 @@ class HomeController extends Controller
 
     public function editProject(Request $request)
     {
+        $validatedData = $request->validate([
+            'pid' => 'required',
+            'title' => 'required',
+            'start_date' => 'required|date',
+            'phase' => 'required',
+            'description' => 'required',
+        ]);
+
         $affectedRows = DB::table('projects')
         ->where('pid', $request->input("pid"))
         ->update([
@@ -73,6 +81,14 @@ class HomeController extends Controller
 
     public function createProject(Request $request)
     {
+        $validatedData = $request->validate([
+            'pid' => 'required',
+            'title' => 'required',
+            'start_date' => 'required|date',
+            'phase' => 'required',
+            'description' => 'required',
+        ]);
+
         DB::insert('insert into projects (title, start_date,end_date,phase,description,id) values (?,?,?,?,?,?)', [$request->input('title'),$request->input('start_date'),$request->input('end_date'),$request->input('phase'),$request->input('description'), session("id")]);
         return redirect('home');
     }
